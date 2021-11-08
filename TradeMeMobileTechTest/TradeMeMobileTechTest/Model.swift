@@ -22,6 +22,7 @@ struct Listing: Decodable {
     let title: String
     let region: String
     let isBuyNowOnly: Bool?
+    let isClassified: Bool?
     let hasBuyNow: Bool?
     let buyNowPrice: Double?
     let priceDisplay: String?
@@ -33,6 +34,7 @@ struct Listing: Decodable {
         case title = "Title"
         case region = "Region"
         case isBuyNowOnly = "IsBuyNowOnly"
+        case isClassified = "IsClassified"
         case hasBuyNow = "HasBuyNow"
         case buyNowPrice = "BuyNowPrice"
         case priceDisplay = "PriceDisplay"

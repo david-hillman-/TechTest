@@ -21,6 +21,13 @@ final class LatestListingsViewController: UIViewController {
     @IBOutlet weak var loadingLabel: UILabel!
     
     var viewModel: LatestListingsViewModelProtocol
+    var currencyFormatter = NumberFormatter() {
+        didSet {
+            currencyFormatter.usesGroupingSeparator = true
+            currencyFormatter.numberStyle = .currency
+            currencyFormatter.locale = Locale.current
+        }
+    }
     
     init?(coder: NSCoder, viewModel: LatestListingsViewModelProtocol) {
         self.viewModel = viewModel
@@ -80,16 +87,26 @@ extension LatestListingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ListingTableViewCell") as? ListingTableViewCell {
-           let listing = viewModel.listings[indexPath.row]
+           
+            let listing = viewModel.listings[indexPath.row]
             
             cell.regionLabel.text = listing.region
             cell.titleLabel.text = listing.title
-            cell.currentPriceLabel.text = listing.priceDisplay
-            
-            if let buyNowPrice = listing.buyNowPrice {
-                cell.buyNowPriceLabel.text = "\(buyNowPrice)"
+            //DH- From what i understood of the instructions in the acceptance criteria the labels swap depending on if its a classified, I couldnt find a classified in the design to confirm this.
+            if listing.isClassified ?? false {
+                cell.leftPriceLabel.text = ""
+                if let priceDisplay = listing.priceDisplay {
+                    cell.rightPriceLabel.text = priceDisplay
+                } else {
+                    cell.rightPriceLabel.text = ""
+                }
             } else {
-                cell.buyNowPriceLabel.text = ""
+                cell.leftPriceLabel.text = listing.priceDisplay ?? ""
+                if let buyNowPrice = listing.buyNowPrice {
+                    cell.rightPriceLabel.text = currencyFormatter.string(from: NSNumber(value: buyNowPrice))
+                } else {
+                    cell.rightPriceLabel.text = ""
+                }
             }
             
             if let imageUrlString = listing.imageUrlString {

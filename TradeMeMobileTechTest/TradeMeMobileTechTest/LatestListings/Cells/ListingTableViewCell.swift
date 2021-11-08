@@ -21,16 +21,16 @@ final class ListingTableViewCell: UITableViewCell {
             titleLabel.textColor = .textDark
         }
     }
-    @IBOutlet weak var buyNowPriceLabel: UILabel! {
+    @IBOutlet weak var leftPriceLabel: UILabel! {
         didSet {
-            buyNowPriceLabel.font = .systemFont(ofSize: 12)
-            buyNowPriceLabel.textColor = .textDark
+            leftPriceLabel.font = .systemFont(ofSize: 12)
+            leftPriceLabel.textColor = .textDark
         }
     }
-    @IBOutlet weak var currentPriceLabel: UILabel! {
+    @IBOutlet weak var rightPriceLabel: UILabel! {
         didSet {
-            currentPriceLabel.font = .systemFont(ofSize: 12)
-            currentPriceLabel.textColor = .textDark
+            rightPriceLabel.font = .systemFont(ofSize: 12)
+            rightPriceLabel.textColor = .textDark
         }
     }
     @IBOutlet weak var heroImageView: UIImageView!
@@ -39,8 +39,8 @@ final class ListingTableViewCell: UITableViewCell {
         
         regionLabel.text = ""
         titleLabel.text = ""
-        buyNowPriceLabel.text = ""
-        currentPriceLabel.text = ""
+        leftPriceLabel.text = ""
+        rightPriceLabel.text = ""
         heroImageView.image = nil
     }
 }

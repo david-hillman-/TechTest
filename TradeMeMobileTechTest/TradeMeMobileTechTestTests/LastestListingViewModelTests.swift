@@ -31,6 +31,7 @@ class LastestListingViewModelTests: XCTestCase {
                        title: "This",
                        region: "That",
                        isBuyNowOnly: false,
+                       isClassified: false,
                        hasBuyNow: false,
                        buyNowPrice: 2.0,
                        priceDisplay: "$303",

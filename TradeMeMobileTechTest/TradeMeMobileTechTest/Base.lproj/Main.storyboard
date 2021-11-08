@@ -98,14 +98,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXI-Kg-uiP">
-                                                    <rect key="frame" x="113" y="68" width="101" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LeftPriceLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXI-Kg-uiP">
+                                                    <rect key="frame" x="113" y="68" width="110" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buynow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHE-0I-lbO">
-                                                    <rect key="frame" x="333" y="68" width="61" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RightPriceLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHE-0I-lbO">
+                                                    <rect key="frame" x="274" y="68" width="120" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -137,10 +137,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="buyNowPriceLabel" destination="zHE-0I-lbO" id="Kyl-b8-7kk"/>
-                                            <outlet property="currentPriceLabel" destination="GXI-Kg-uiP" id="CaL-nE-Nt4"/>
                                             <outlet property="heroImageView" destination="5aC-56-cT9" id="RSN-8z-qsh"/>
+                                            <outlet property="leftPriceLabel" destination="GXI-Kg-uiP" id="Ano-BD-nb7"/>
                                             <outlet property="regionLabel" destination="kCU-C0-qxk" id="KMS-yj-TEj"/>
+                                            <outlet property="rightPriceLabel" destination="zHE-0I-lbO" id="rCv-oY-ifU"/>
                                             <outlet property="titleLabel" destination="x12-o7-M3x" id="p91-Yc-jHR"/>
                                         </connections>
                                     </tableViewCell>
