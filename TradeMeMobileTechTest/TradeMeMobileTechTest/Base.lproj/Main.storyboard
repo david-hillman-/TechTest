@@ -39,10 +39,81 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QtF-9V-eMV">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListingTableViewCell" rowHeight="100" id="ELP-gk-7pS" customClass="ListingTableViewCell" customModule="TradeMeMobileTechTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ELP-gk-7pS" id="edI-9i-t8b">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x12-o7-M3x">
+                                                    <rect key="frame" x="113" y="37" width="33" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCU-C0-qxk">
+                                                    <rect key="frame" x="113" y="11" width="53" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXI-Kg-uiP">
+                                                    <rect key="frame" x="113" y="68" width="101" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buynow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHE-0I-lbO">
+                                                    <rect key="frame" x="333" y="68" width="61" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5aC-56-cT9">
+                                                    <rect key="frame" x="5" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="K24-Ea-nx9"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Zbi-t8-A3d"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zHE-0I-lbO" firstAttribute="bottom" secondItem="edI-9i-t8b" secondAttribute="bottomMargin" id="3gT-of-Ge5"/>
+                                                <constraint firstItem="x12-o7-M3x" firstAttribute="top" secondItem="kCU-C0-qxk" secondAttribute="bottom" constant="5" id="9UN-Yy-hpL"/>
+                                                <constraint firstItem="kCU-C0-qxk" firstAttribute="top" secondItem="edI-9i-t8b" secondAttribute="topMargin" id="Ad1-2f-AGG"/>
+                                                <constraint firstItem="GXI-Kg-uiP" firstAttribute="leading" secondItem="5aC-56-cT9" secondAttribute="trailing" constant="8" symbolic="YES" id="E8n-Cf-voy"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="kCU-C0-qxk" secondAttribute="trailing" id="ITO-Kf-asA"/>
+                                                <constraint firstItem="zHE-0I-lbO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GXI-Kg-uiP" secondAttribute="trailing" constant="10" id="JiU-6S-iRy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GXI-Kg-uiP" secondAttribute="bottom" id="OaH-mw-bdz"/>
+                                                <constraint firstItem="5aC-56-cT9" firstAttribute="top" secondItem="edI-9i-t8b" secondAttribute="top" id="Rni-na-ccv"/>
+                                                <constraint firstItem="5aC-56-cT9" firstAttribute="leading" secondItem="edI-9i-t8b" secondAttribute="leading" constant="5" id="eMW-4b-29q"/>
+                                                <constraint firstItem="kCU-C0-qxk" firstAttribute="leading" secondItem="5aC-56-cT9" secondAttribute="trailing" constant="8" symbolic="YES" id="fdC-Nm-h0W"/>
+                                                <constraint firstItem="zHE-0I-lbO" firstAttribute="trailing" secondItem="edI-9i-t8b" secondAttribute="trailingMargin" id="gjU-2q-Bi8"/>
+                                                <constraint firstItem="x12-o7-M3x" firstAttribute="leading" secondItem="5aC-56-cT9" secondAttribute="trailing" constant="8" symbolic="YES" id="hhh-iS-7dh"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="x12-o7-M3x" secondAttribute="trailing" id="jNZ-CY-W8m"/>
+                                                <constraint firstItem="GXI-Kg-uiP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="x12-o7-M3x" secondAttribute="bottom" constant="10" id="m9Q-yn-TJm"/>
+                                                <constraint firstAttribute="bottom" secondItem="5aC-56-cT9" secondAttribute="bottom" id="yKJ-rD-AP2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="buyNowPriceLabel" destination="zHE-0I-lbO" id="Kyl-b8-7kk"/>
+                                            <outlet property="currentPriceLabel" destination="GXI-Kg-uiP" id="CaL-nE-Nt4"/>
+                                            <outlet property="heroImageView" destination="5aC-56-cT9" id="RSN-8z-qsh"/>
+                                            <outlet property="regionLabel" destination="kCU-C0-qxk" id="KMS-yj-TEj"/>
+                                            <outlet property="titleLabel" destination="x12-o7-M3x" id="p91-Yc-jHR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1qx-JA-YY5" id="RAH-hZ-dis"/>
+                                    <outlet property="delegate" destination="1qx-JA-YY5" id="eVk-bp-L3e"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="z0V-iy-p8g"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="z0V-iy-p8g" firstAttribute="bottom" secondItem="QtF-9V-eMV" secondAttribute="bottom" id="0rB-jb-Krc"/>
                             <constraint firstItem="QtF-9V-eMV" firstAttribute="leading" secondItem="z0V-iy-p8g" secondAttribute="leading" id="fpa-FT-442"/>
@@ -50,8 +121,24 @@
                             <constraint firstItem="QtF-9V-eMV" firstAttribute="top" secondItem="z0V-iy-p8g" secondAttribute="top" id="uWc-z2-Osf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Latest Listings" id="5DV-oT-Rzh"/>
-                    <navigationItem key="navigationItem" title="Latest Listings" id="Xmq-lb-BbG"/>
+                    <tabBarItem key="tabBarItem" title="Latest Listings" image="search" selectedImage="search" id="5DV-oT-Rzh"/>
+                    <navigationItem key="navigationItem" title="Latest Listings" id="Xmq-lb-BbG">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="cart" id="KO2-fQ-8dK">
+                                <connections>
+                                    <action selector="didTapCartBarItem" destination="1qx-JA-YY5" id="dkD-is-Rq6"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="search" id="Uze-Cm-rnd">
+                                <connections>
+                                    <action selector="didTapSearchBarItem" destination="1qx-JA-YY5" id="ZOZ-HI-v14"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="listingTableView" destination="QtF-9V-eMV" id="1CI-xk-A8w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0z-gc-KKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,28 +151,56 @@
                     <view key="view" contentMode="scaleToFill" id="Doy-ru-WzZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add The Watch List Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Rm-ho-ohA">
+                                <rect key="frame" x="5" y="438" width="404" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vwh-3t-odl"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vwh-3t-odl" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Rm-ho-ohA" secondAttribute="trailing" id="BJP-MK-Hpm"/>
+                            <constraint firstItem="4Rm-ho-ohA" firstAttribute="centerX" secondItem="Doy-ru-WzZ" secondAttribute="centerX" id="eTn-by-89D"/>
+                            <constraint firstItem="4Rm-ho-ohA" firstAttribute="leading" secondItem="vwh-3t-odl" secondAttribute="leading" constant="5" id="tKv-WR-QCm"/>
+                            <constraint firstItem="4Rm-ho-ohA" firstAttribute="centerY" secondItem="Doy-ru-WzZ" secondAttribute="centerY" id="wBh-wV-zwL"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Watchlist" id="P0o-OD-aAT"/>
+                    <tabBarItem key="tabBarItem" title="Watchlist" image="watchlist" selectedImage="watchlist" id="P0o-OD-aAT"/>
                     <navigationItem key="navigationItem" title="Watch List" id="AXI-ur-uMJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akJ-ez-apd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="603" y="-463"/>
         </scene>
-        <!--Latest Listings-->
+        <!--My Trade Me-->
         <scene sceneID="VTc-S0-vhg">
             <objects>
                 <viewController id="6Bc-KM-fO2" customClass="MyTradeMeViewController" customModule="TradeMeMobileTechTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zbe-zx-BII">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add My Trade Me Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2n-zf-4Bv">
+                                <rect key="frame" x="5" y="438" width="404" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Jj2-mS-T8u"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W2n-zf-4Bv" firstAttribute="centerX" secondItem="zbe-zx-BII" secondAttribute="centerX" id="Ril-CW-auU"/>
+                            <constraint firstItem="W2n-zf-4Bv" firstAttribute="centerY" secondItem="zbe-zx-BII" secondAttribute="centerY" id="dUv-CW-XXB"/>
+                            <constraint firstItem="Jj2-mS-T8u" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W2n-zf-4Bv" secondAttribute="trailing" id="g6s-Q1-8ta"/>
+                            <constraint firstItem="W2n-zf-4Bv" firstAttribute="leading" secondItem="Jj2-mS-T8u" secondAttribute="leading" constant="5" id="uOD-Ax-imo"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Trade Me" id="nCt-Tu-bi4"/>
-                    <navigationItem key="navigationItem" title="Latest Listings" id="hBn-uj-9Dw"/>
+                    <tabBarItem key="tabBarItem" title="My Trade Me" image="profile-16" selectedImage="profile-16" id="nCt-Tu-bi4"/>
+                    <navigationItem key="navigationItem" title="My Trade Me" id="hBn-uj-9Dw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6v-H3-DaJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,17 +262,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cart" width="24" height="24"/>
+        <image name="profile-16" width="16" height="16"/>
+        <image name="search" width="24" height="24"/>
+        <image name="watchlist" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

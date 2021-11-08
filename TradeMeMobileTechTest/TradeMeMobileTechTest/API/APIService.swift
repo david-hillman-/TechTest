@@ -7,25 +7,24 @@
 
 import Foundation
 
-struct LatestListings: Decodable {
-    let totalCount: Int
-    let listings: [Listing]
+struct APIUrlStrings {
     
-    enum CodingKeys: String, CodingKey {
-        case totalCount = "TotalCount"
-        case listings = "List"
-    }
+    static let baseUrl = "https://api.tmsandbox.co.nz/v1/"
+    static let listings = "listings/latest.json?"
 }
 
-// MARK: - EmployeeData
-struct Listing: Decodable {
-    let id: Int
-    let title: String
+// All params are hardcoded for the exercise
 
-    enum CodingKeys: String, CodingKey {
-        case id = "ListingId"
-        case title = "Title"
-    }
+struct APIParams {
+    
+    static let rows = "rows=20"
+}
+
+struct APIAuthParams {
+    
+    static let consumer = "oauth_consumer_key=A1AC63F0332A131A78FAC304D007E7D1"
+    static let method = "oauth_signature_method=PLAINTEXT"
+    static let signature = "oauth_signature=EC7F18B17A062962C6930A8AE88B16C7%26"
 }
 
 protocol APIServiceProtocol {
@@ -35,15 +34,12 @@ protocol APIServiceProtocol {
 
 class APIService: APIServiceProtocol {
     
-    private let sourcesURL = URL(string: "https://api.tmsandbox.co.nz/v1/listings/latest.json?rows=20")!
-
-    
     func getLatestListings(completion: @escaping (LatestListings?) -> ()){
         
-        let authString = "OAuth oauth_consumer_key=A1AC63F0332A131A78FAC304D007E7D1,oauth_signature_method=PLAINTEXT,oauth_signature=EC7F18B17A062962C6930A8AE88B16C7%26"
+        let authString = "OAuth \(APIAuthParams.consumer),\(APIAuthParams.method),\(APIAuthParams.signature)"
+        guard let listingUrl = URL(string: APIUrlStrings.baseUrl + APIUrlStrings.listings + APIParams.rows) else { return }
         
-        
-        var request = URLRequest(url: sourcesURL)
+        var request = URLRequest(url: listingUrl)
         request.addValue(authString, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         
