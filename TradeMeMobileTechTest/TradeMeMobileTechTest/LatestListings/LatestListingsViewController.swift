@@ -34,9 +34,7 @@ final class LatestListingsViewController: UIViewController {
     }
     
     private func updateCurrentUI() {
-        DispatchQueue.main.async {
-            self.listingTableView.reloadData()
-        }
+        self.listingTableView.reloadData()
     }
     
     private func displayAlert(type: AlertType) {

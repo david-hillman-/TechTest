@@ -8,10 +8,10 @@
 import UIKit
 
 enum LoadingState<Data> {
-  case unloaded
-  case loading
-  case success(Data)
-  case error(Error)
+    case unloaded
+    case loading
+    case success(Data)
+    case error(Error)
 }
 
 protocol LatestListingsViewModelProtocol {
@@ -22,15 +22,17 @@ protocol LatestListingsViewModelProtocol {
 }
 
 final class LatestListingsViewModel: LatestListingsViewModelProtocol {
-
+    
     private var apiService: APIServiceProtocol!
     var boundViewControllerDataUpdate: (() -> Void) = {}
     var listings: [Listing] {
         didSet {
-            boundViewControllerDataUpdate()
+            DispatchQueue.main.async {
+                self.boundViewControllerDataUpdate()
+            }
         }
     }
-
+    
     init(apiService: APIServiceProtocol) {
         self.apiService = apiService
         self.listings = []
