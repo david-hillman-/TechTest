@@ -41,7 +41,6 @@ final class APIService: APIServiceProtocol {
         
         var request = URLRequest(url: listingUrl)
         request.addValue(authString, forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
         
         URLSession.shared.dataTask(with: request) { (data, urlResponse, error) in
             
