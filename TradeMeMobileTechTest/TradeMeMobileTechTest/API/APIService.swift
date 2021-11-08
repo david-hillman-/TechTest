@@ -32,7 +32,7 @@ protocol APIServiceProtocol {
     func getLatestListings(completion: @escaping (LatestListings?) -> ())
 }
 
-class APIService: APIServiceProtocol {
+final class APIService: APIServiceProtocol {
     
     func getLatestListings(completion: @escaping (LatestListings?) -> ()){
         

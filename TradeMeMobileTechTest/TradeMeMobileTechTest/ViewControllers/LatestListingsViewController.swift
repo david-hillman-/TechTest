@@ -7,14 +7,6 @@
 
 import UIKit
 
-extension UIColor {
-    static let feijoa = UIColor(named: "Feijoa 500")
-    static let tasman = UIColor(named: "Tasman500")
-    
-    static let textDark = UIColor(named: "Text dark - Bluff Oyster 800")
-    static let textLight = UIColor(named: "Test light - Bluff Oyster 600")
-}
-
 enum AlertType: String {
     
     case cellTap = "Display action for cell tap",

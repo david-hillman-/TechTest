@@ -14,7 +14,7 @@ protocol LatestListingsViewModelProtocol {
     var listings: [Listing]! { get }
 }
 
-class LatestListingsViewModel: LatestListingsViewModelProtocol {
+final class LatestListingsViewModel: LatestListingsViewModelProtocol {
 
     private var apiService: APIServiceProtocol!
     var boundViewControllerDataUpdate : (() -> ()) = {}

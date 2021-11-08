@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WatchListViewController: UIViewController {
+final class WatchListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

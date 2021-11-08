@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyTradeMeViewController: UIViewController {
+final class MyTradeMeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
