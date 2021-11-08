@@ -18,19 +18,26 @@ final class LatestListingsViewController: UIViewController {
     
     @IBOutlet weak var listingTableView: UITableView!
     
-    var api: APIServiceProtocol?
-    var viewModel: LatestListingsViewModelProtocol?
+    var viewModel: LatestListingsViewModelProtocol
+    
+    init?(coder: NSCoder, viewModel: LatestListingsViewModelProtocol) {
+        self.viewModel = viewModel
+        
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        api = APIService()
-        viewModel = LatestListingsViewModel(apiService: api!)
-        viewModel?.boundViewControllerDataUpdate = {
+        viewModel.boundViewControllerDataUpdate = {
             self.updateCurrentUI()
         }
-        viewModel?.refreshData()
+        viewModel.refreshData()
     }
     
     private func updateCurrentUI() {
@@ -57,12 +64,12 @@ final class LatestListingsViewController: UIViewController {
 extension LatestListingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel?.listings.count ?? 0
+        viewModel.listings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "ListingTableViewCell") as? ListingTableViewCell,
-           let listing = viewModel?.listings[indexPath.row] {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ListingTableViewCell") as? ListingTableViewCell {
+           let listing = viewModel.listings[indexPath.row]
             
             cell.regionLabel.text = listing.region
             cell.titleLabel.text = listing.title
@@ -81,8 +88,6 @@ extension LatestListingsViewController: UITableViewDataSource {
             }
             return cell
         }
-        
-        
         return UITableViewCell()
     }
 }

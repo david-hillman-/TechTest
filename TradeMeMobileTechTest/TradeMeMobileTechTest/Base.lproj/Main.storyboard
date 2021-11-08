@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SBA-da-QbG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E17-9i-J8w">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -8,6 +8,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="ne2-9X-kHE">
+            <objects>
+                <viewController id="E17-9i-J8w" customClass="RootViewController" customModule="TradeMeMobileTechTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s82-ah-111">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMe-Fs-Ms8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="SBA-da-QbG" kind="embed" id="IMB-2n-C4Q"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="heS-ea-KQM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fMe-Fs-Ms8" firstAttribute="leading" secondItem="heS-ea-KQM" secondAttribute="leading" id="ASi-DC-Had"/>
+                            <constraint firstAttribute="bottom" secondItem="fMe-Fs-Ms8" secondAttribute="bottom" id="FpB-hv-0Jn"/>
+                            <constraint firstItem="heS-ea-KQM" firstAttribute="trailing" secondItem="fMe-Fs-Ms8" secondAttribute="trailing" id="bWE-0z-XKb"/>
+                            <constraint firstItem="fMe-Fs-Ms8" firstAttribute="top" secondItem="s82-ah-111" secondAttribute="top" id="xiW-QP-KJn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3v-By-Vkb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1849" y="-166"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DB6-Zo-mJz">
             <objects>
@@ -217,7 +246,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="1qx-JA-YY5" kind="relationship" relationship="rootViewController" id="tmC-jc-ndR"/>
+                        <segue destination="1qx-JA-YY5" kind="relationship" relationship="rootViewController" destinationCreationSelector="makeLatestListingsViewControllerWithCoder:" id="tmC-jc-ndR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEq-AQ-qot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

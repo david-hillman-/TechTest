@@ -24,6 +24,7 @@
 		2C9CCF0427390AC6000FF496 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCF0327390AC6000FF496 /* Extensions.swift */; };
 		2C9CCF0827391A41000FF496 /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCF0727391A41000FF496 /* ListingTableViewCell.swift */; };
 		2C9CCF0A27391D0B000FF496 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCF0927391D0B000FF496 /* Model.swift */; };
+		2CF9F9772739D29C00424270 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9F9762739D29C00424270 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		2C9CCF0327390AC6000FF496 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2C9CCF0727391A41000FF496 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 		2C9CCF0927391D0B000FF496 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2CF9F9762739D29C00424270 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				2C9CCEC52738818A000FF496 /* AppDelegate.swift */,
 				2C9CCEC72738818A000FF496 /* SceneDelegate.swift */,
+				2CF9F9762739D29C00424270 /* RootViewController.swift */,
 				2CF9F9742739C5D900424270 /* WatchList */,
 				2CF9F9752739C5E100424270 /* MyTradeMe */,
 				2CF9F9732739C5CC00424270 /* LatestListings */,
@@ -336,6 +339,7 @@
 				2C9CCEFF2738A259000FF496 /* LatestListingsViewModel.swift in Sources */,
 				2C9CCF0427390AC6000FF496 /* Extensions.swift in Sources */,
 				2C9CCECA2738818A000FF496 /* LatestListingsViewController.swift in Sources */,
+				2CF9F9772739D29C00424270 /* RootViewController.swift in Sources */,
 				2C9CCEC62738818A000FF496 /* AppDelegate.swift in Sources */,
 				2C9CCF0827391A41000FF496 /* ListingTableViewCell.swift in Sources */,
 				2C9CCEF6273882FF000FF496 /* APIService.swift in Sources */,
