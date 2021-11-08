@@ -3,7 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,16 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMe-Fs-Ms8">
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMe-Fs-Ms8">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="SBA-da-QbG" kind="embed" id="IMB-2n-C4Q"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="heS-ea-KQM"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fMe-Fs-Ms8" firstAttribute="leading" secondItem="heS-ea-KQM" secondAttribute="leading" id="ASi-DC-Had"/>
                             <constraint firstAttribute="bottom" secondItem="fMe-Fs-Ms8" secondAttribute="bottom" id="FpB-hv-0Jn"/>
@@ -65,9 +66,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2l-bj-G8k">
+                                <rect key="frame" x="5" y="426" width="404" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="U3Z-I4-jg7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Text dark - Bluff Oyster 800"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QtF-9V-eMV">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListingTableViewCell" rowHeight="100" id="ELP-gk-7pS" customClass="ListingTableViewCell" customModule="TradeMeMobileTechTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
@@ -108,7 +118,6 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="zHE-0I-lbO" firstAttribute="bottom" secondItem="edI-9i-t8b" secondAttribute="bottomMargin" id="3gT-of-Ge5"/>
                                                 <constraint firstItem="x12-o7-M3x" firstAttribute="top" secondItem="kCU-C0-qxk" secondAttribute="bottom" constant="5" id="9UN-Yy-hpL"/>
@@ -146,8 +155,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="z0V-iy-p8g" firstAttribute="bottom" secondItem="QtF-9V-eMV" secondAttribute="bottom" id="0rB-jb-Krc"/>
+                            <constraint firstItem="z0V-iy-p8g" firstAttribute="trailing" secondItem="m2l-bj-G8k" secondAttribute="trailing" constant="5" id="ICy-xK-AXp"/>
                             <constraint firstItem="QtF-9V-eMV" firstAttribute="leading" secondItem="z0V-iy-p8g" secondAttribute="leading" id="fpa-FT-442"/>
+                            <constraint firstItem="m2l-bj-G8k" firstAttribute="leading" secondItem="z0V-iy-p8g" secondAttribute="leading" constant="5" id="ge7-9Y-6cg"/>
                             <constraint firstItem="QtF-9V-eMV" firstAttribute="trailing" secondItem="z0V-iy-p8g" secondAttribute="trailing" id="qJ2-GG-DkJ"/>
+                            <constraint firstItem="m2l-bj-G8k" firstAttribute="centerY" secondItem="e7C-vk-uqT" secondAttribute="centerY" id="qVC-AM-xd7"/>
                             <constraint firstItem="QtF-9V-eMV" firstAttribute="top" secondItem="z0V-iy-p8g" secondAttribute="top" id="uWc-z2-Osf"/>
                         </constraints>
                     </view>
@@ -168,6 +180,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="listingTableView" destination="QtF-9V-eMV" id="1CI-xk-A8w"/>
+                        <outlet property="loadingLabel" destination="m2l-bj-G8k" id="cVN-QV-JVT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0z-gc-KKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -296,5 +309,11 @@
         <image name="profile-16" width="16" height="16"/>
         <image name="search" width="24" height="24"/>
         <image name="watchlist" width="24" height="24"/>
+        <namedColor name="Text dark - Bluff Oyster 800">
+            <color red="0.22400000691413879" green="0.20800000429153442" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

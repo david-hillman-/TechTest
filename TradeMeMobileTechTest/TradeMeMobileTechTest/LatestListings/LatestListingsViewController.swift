@@ -35,7 +35,7 @@ final class LatestListingsViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        updateCurrentUI(state: .loading)
         viewModel.boundViewControllerDataUpdate = { state in
             self.updateCurrentUI(state: state)
         }
@@ -46,7 +46,7 @@ final class LatestListingsViewController: UIViewController {
         
         switch state {
         case .unloaded, .loading:
-            loadingLabel.isHidden = false
+            listingTableView.isHidden = true
         case .success(_):
             listingTableView.isHidden = false
             listingTableView.reloadData()
