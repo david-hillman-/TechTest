@@ -13,10 +13,12 @@ final class LatestListingsViewController: UIViewController {
         
         case cellTap = "Display action for cell tap",
              searchTap = "Display action for search tap",
-             cartTap = "Display action for cart tap"
+             cartTap = "Display action for cart tap",
+             error = "There was an error loading results"
     }
     
     @IBOutlet weak var listingTableView: UITableView!
+    @IBOutlet weak var loadingLabel: UILabel!
     
     var viewModel: LatestListingsViewModelProtocol
     
@@ -34,14 +36,23 @@ final class LatestListingsViewController: UIViewController {
         
         super.viewDidLoad()
         
-        viewModel.boundViewControllerDataUpdate = {
-            self.updateCurrentUI()
+        viewModel.boundViewControllerDataUpdate = { state in
+            self.updateCurrentUI(state: state)
         }
         viewModel.refreshData()
     }
     
-    private func updateCurrentUI() {
-        self.listingTableView.reloadData()
+    private func updateCurrentUI(state: LoadingState) {
+        
+        switch state {
+        case .unloaded, .loading:
+            loadingLabel.isHidden = false
+        case .success(_):
+            listingTableView.isHidden = false
+            listingTableView.reloadData()
+        case .error(_):
+            displayAlert(type: .error)
+        }
     }
     
     private func displayAlert(type: AlertType) {

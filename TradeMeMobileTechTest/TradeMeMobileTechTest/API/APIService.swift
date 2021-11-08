@@ -7,6 +7,13 @@
 
 import Foundation
 
+enum LoadingState {
+    case unloaded
+    case loading
+    case success([Listing])
+    case error(Error)
+}
+
 struct APIUrlStrings {
     
     static let baseUrl = "https://api.tmsandbox.co.nz/v1/"
@@ -29,12 +36,12 @@ struct APIAuthParams {
 
 protocol APIServiceProtocol {
     
-    func getLatestListings(completion: @escaping (LatestListings?) -> ())
+    func getLatestListings(completion: @escaping (LoadingState) -> ())
 }
 
 final class APIService: APIServiceProtocol {
     
-    func getLatestListings(completion: @escaping (LatestListings?) -> ()){
+    func getLatestListings(completion: @escaping (LoadingState) -> ()){
         
         let authString = "OAuth \(APIAuthParams.consumer),\(APIAuthParams.method),\(APIAuthParams.signature)"
         guard let listingUrl = URL(string: APIUrlStrings.baseUrl + APIUrlStrings.listings + APIParams.rows) else { return }
@@ -49,9 +56,9 @@ final class APIService: APIServiceProtocol {
 
                 do {
                     let list = try decoder.decode(LatestListings.self, from: data)
-                    completion(list)
+                    completion(.success(list.listings))
                 } catch {
-                    print(String(describing: error))
+                    completion(.error(error))
                 }
             }
         }.resume()

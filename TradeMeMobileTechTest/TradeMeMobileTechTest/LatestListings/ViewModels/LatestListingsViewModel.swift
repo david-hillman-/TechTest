@@ -7,46 +7,46 @@
 
 import UIKit
 
-enum LoadingState<Data> {
-    case unloaded
-    case loading
-    case success(Data)
-    case error(Error)
-}
 
 protocol LatestListingsViewModelProtocol {
     
     func refreshData()
-    var boundViewControllerDataUpdate: (() -> Void) { get set }
+    var boundViewControllerDataUpdate: ((_ state: LoadingState) -> Void) { get set }
     var listings: [Listing] { get }
 }
 
 final class LatestListingsViewModel: LatestListingsViewModelProtocol {
     
     private var apiService: APIServiceProtocol!
-    var boundViewControllerDataUpdate: (() -> Void) = {}
-    var listings: [Listing] {
-        didSet {
-            DispatchQueue.main.async {
-                self.boundViewControllerDataUpdate()
-            }
-        }
-    }
+    var boundViewControllerDataUpdate: ((_ state: LoadingState) -> Void) = {state in }
+    var listings: [Listing] = []
     
     init(apiService: APIServiceProtocol) {
         self.apiService = apiService
-        self.listings = []
     }
     
-    func bindViewControllerDataUpdate(updateEvent: @escaping (() -> Void)) {
+    func bindViewControllerDataUpdate(updateEvent: @escaping ((_ state: LoadingState) -> Void)) {
         boundViewControllerDataUpdate = updateEvent
     }
     
     func refreshData() {
-        apiService.getLatestListings { [weak self] lastestListings in
+        apiService.getLatestListings { [weak self] loadingState in
             
             guard let self = self else { return }
-            self.listings = lastestListings?.listings ?? []
+            DispatchQueue.main.async {
+                switch loadingState {
+                case .unloaded, .loading:
+                    self.boundViewControllerDataUpdate(.loading)
+                case .success(let listings):
+                    self.listings = listings
+                    self.boundViewControllerDataUpdate(.success(listings))
+                case .error(let error):
+                    self.listings = []
+                    print(String(describing: error))
+                    self.boundViewControllerDataUpdate(.error(error))
+                    
+                }
+            }
         }
     }
 }
