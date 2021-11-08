@@ -7,14 +7,14 @@
 
 import UIKit
 
-enum AlertType: String {
-    
-    case cellTap = "Display action for cell tap",
-         searchTap = "Display action for search tap",
-         cartTap = "Display action for cart tap"
-}
-
 final class LatestListingsViewController: UIViewController {
+    
+    enum AlertType: String {
+        
+        case cellTap = "Display action for cell tap",
+             searchTap = "Display action for search tap",
+             cartTap = "Display action for cart tap"
+    }
     
     @IBOutlet weak var listingTableView: UITableView!
     

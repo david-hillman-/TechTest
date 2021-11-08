@@ -117,10 +117,10 @@
 			children = (
 				2C9CCEC52738818A000FF496 /* AppDelegate.swift */,
 				2C9CCEC72738818A000FF496 /* SceneDelegate.swift */,
+				2CF9F9742739C5D900424270 /* WatchList */,
+				2CF9F9752739C5E100424270 /* MyTradeMe */,
+				2CF9F9732739C5CC00424270 /* LatestListings */,
 				2C9CCEF927389058000FF496 /* API */,
-				2C9CCF0627391A33000FF496 /* Cells */,
-				2C9CCF0527391A2C000FF496 /* ViewControllers */,
-				2C9CCF022738EE31000FF496 /* ViewModels */,
 				2C9CCF0927391D0B000FF496 /* Model.swift */,
 				2C9CCF0327390AC6000FF496 /* Extensions.swift */,
 				2C9CCECB2738818A000FF496 /* Main.storyboard */,
@@ -165,22 +165,40 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		2C9CCF0527391A2C000FF496 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				2C9CCEC92738818A000FF496 /* LatestListingsViewController.swift */,
-				2C9CCEFA273891D2000FF496 /* WatchListViewController.swift */,
-				2C9CCEFC27389268000FF496 /* MyTradeMeViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		2C9CCF0627391A33000FF496 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				2C9CCF0727391A41000FF496 /* ListingTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		2CF9F9732739C5CC00424270 /* LatestListings */ = {
+			isa = PBXGroup;
+			children = (
+				2C9CCEC92738818A000FF496 /* LatestListingsViewController.swift */,
+				2C9CCF022738EE31000FF496 /* ViewModels */,
+				2C9CCF0627391A33000FF496 /* Cells */,
+			);
+			path = LatestListings;
+			sourceTree = "<group>";
+		};
+		2CF9F9742739C5D900424270 /* WatchList */ = {
+			isa = PBXGroup;
+			children = (
+				2C9CCEFA273891D2000FF496 /* WatchListViewController.swift */,
+			);
+			name = WatchList;
+			path = LatestListings/WatchList;
+			sourceTree = "<group>";
+		};
+		2CF9F9752739C5E100424270 /* MyTradeMe */ = {
+			isa = PBXGroup;
+			children = (
+				2C9CCEFC27389268000FF496 /* MyTradeMeViewController.swift */,
+			);
+			name = MyTradeMe;
+			path = LatestListings/WatchList/MyTradeMe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
