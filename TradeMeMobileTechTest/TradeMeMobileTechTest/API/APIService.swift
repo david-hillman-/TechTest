@@ -7,11 +7,28 @@
 
 import Foundation
 
-enum LoadingState {
-    case unloaded
+enum LoadingState: Equatable {
+    
     case loading
     case success([Listing])
     case error(Error)
+    
+    static func == (lhs: LoadingState, rhs: LoadingState) -> Bool {
+        
+        switch (lhs, rhs) {
+        case ( .loading, .loading):
+            return true
+            
+        case ( .success, .success):
+            return true
+            
+        case (.error, .error):
+            return true
+            
+        default:
+            return false
+        }
+    }
 }
 
 struct APIUrlStrings {

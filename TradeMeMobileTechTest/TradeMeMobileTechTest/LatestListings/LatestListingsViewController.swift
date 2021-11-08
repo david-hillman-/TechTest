@@ -45,7 +45,7 @@ final class LatestListingsViewController: UIViewController {
     private func updateCurrentUI(state: LoadingState) {
         
         switch state {
-        case .unloaded, .loading:
+        case .loading:
             listingTableView.isHidden = true
         case .success(_):
             listingTableView.isHidden = false

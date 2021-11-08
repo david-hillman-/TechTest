@@ -13,7 +13,6 @@
 		2C9CCECD2738818A000FF496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9CCECB2738818A000FF496 /* Main.storyboard */; };
 		2C9CCECF2738818B000FF496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9CCECE2738818B000FF496 /* Assets.xcassets */; };
 		2C9CCED22738818B000FF496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9CCED02738818B000FF496 /* LaunchScreen.storyboard */; };
-		2C9CCEDD2738818B000FF496 /* TradeMeMobileTechTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCEDC2738818B000FF496 /* TradeMeMobileTechTestTests.swift */; };
 		2C9CCEE72738818B000FF496 /* TradeMeMobileTechTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCEE62738818B000FF496 /* TradeMeMobileTechTestUITests.swift */; };
 		2C9CCEE92738818B000FF496 /* TradeMeMobileTechTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCEE82738818B000FF496 /* TradeMeMobileTechTestUITestsLaunchTests.swift */; };
 		2C9CCEF6273882FF000FF496 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCEF5273882FF000FF496 /* APIService.swift */; };
@@ -25,6 +24,9 @@
 		2C9CCF0827391A41000FF496 /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCF0727391A41000FF496 /* ListingTableViewCell.swift */; };
 		2C9CCF0A27391D0B000FF496 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCF0927391D0B000FF496 /* Model.swift */; };
 		2CF9F9772739D29C00424270 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9F9762739D29C00424270 /* RootViewController.swift */; };
+		2CF9F9792739E15B00424270 /* StubApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9F9782739E15B00424270 /* StubApiService.swift */; };
+		2CF9F97B2739E23100424270 /* StubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9F97A2739E23100424270 /* StubViewModel.swift */; };
+		2CF9F97D2739E2A900424270 /* LastestListingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9F97C2739E2A900424270 /* LastestListingViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +56,6 @@
 		2C9CCED12738818B000FF496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C9CCED32738818B000FF496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C9CCED82738818B000FF496 /* TradeMeMobileTechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMeMobileTechTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C9CCEDC2738818B000FF496 /* TradeMeMobileTechTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMeMobileTechTestTests.swift; sourceTree = "<group>"; };
 		2C9CCEE22738818B000FF496 /* TradeMeMobileTechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMeMobileTechTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9CCEE62738818B000FF496 /* TradeMeMobileTechTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMeMobileTechTestUITests.swift; sourceTree = "<group>"; };
 		2C9CCEE82738818B000FF496 /* TradeMeMobileTechTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMeMobileTechTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -67,6 +68,9 @@
 		2C9CCF0727391A41000FF496 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 		2C9CCF0927391D0B000FF496 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		2CF9F9762739D29C00424270 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		2CF9F9782739E15B00424270 /* StubApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubApiService.swift; sourceTree = "<group>"; };
+		2CF9F97A2739E23100424270 /* StubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubViewModel.swift; sourceTree = "<group>"; };
+		2CF9F97C2739E2A900424270 /* LastestListingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastestListingViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +142,9 @@
 		2C9CCEDB2738818B000FF496 /* TradeMeMobileTechTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				2C9CCEDC2738818B000FF496 /* TradeMeMobileTechTestTests.swift */,
+				2CF9F97C2739E2A900424270 /* LastestListingViewModelTests.swift */,
+				2CF9F9782739E15B00424270 /* StubApiService.swift */,
+				2CF9F97A2739E23100424270 /* StubViewModel.swift */,
 			);
 			path = TradeMeMobileTechTestTests;
 			sourceTree = "<group>";
@@ -354,7 +360,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C9CCEDD2738818B000FF496 /* TradeMeMobileTechTestTests.swift in Sources */,
+				2CF9F97B2739E23100424270 /* StubViewModel.swift in Sources */,
+				2CF9F9792739E15B00424270 /* StubApiService.swift in Sources */,
+				2CF9F97D2739E2A900424270 /* LastestListingViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,7 +35,7 @@ final class LatestListingsViewModel: LatestListingsViewModelProtocol {
             guard let self = self else { return }
             DispatchQueue.main.async {
                 switch loadingState {
-                case .unloaded, .loading:
+                case .loading:
                     self.boundViewControllerDataUpdate(.loading)
                 case .success(let listings):
                     self.listings = listings
