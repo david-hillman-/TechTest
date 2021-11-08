@@ -7,18 +7,25 @@
 
 import UIKit
 
+enum LoadingState<Data> {
+  case unloaded
+  case loading
+  case success(Data)
+  case error(Error)
+}
+
 protocol LatestListingsViewModelProtocol {
     
     func refreshData()
-    var boundViewControllerDataUpdate : (() -> ()) { get set }
-    var listings: [Listing]! { get }
+    var boundViewControllerDataUpdate: (() -> Void) { get set }
+    var listings: [Listing] { get }
 }
 
 final class LatestListingsViewModel: LatestListingsViewModelProtocol {
 
     private var apiService: APIServiceProtocol!
-    var boundViewControllerDataUpdate : (() -> ()) = {}
-    var listings: [Listing]! {
+    var boundViewControllerDataUpdate: (() -> Void) = {}
+    var listings: [Listing] {
         didSet {
             boundViewControllerDataUpdate()
         }
@@ -29,15 +36,15 @@ final class LatestListingsViewModel: LatestListingsViewModelProtocol {
         self.listings = []
     }
     
-    func bindViewControllerDataUpdate(updateEvent: @escaping (() -> ())) {
+    func bindViewControllerDataUpdate(updateEvent: @escaping (() -> Void)) {
         boundViewControllerDataUpdate = updateEvent
     }
     
     func refreshData() {
-        apiService.getLatestListings { [weak self] listings in
+        apiService.getLatestListings { [weak self] lastestListings in
             
             guard let self = self else { return }
-            self.listings = listings?.listings
+            self.listings = lastestListings?.listings ?? []
         }
     }
 }

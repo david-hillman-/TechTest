@@ -17,8 +17,6 @@ struct LatestListings: Decodable {
     }
 }
 
-// DH: I couldnt find an example in the test data that contained "IsClassified" ive take it as if a listing has PriceDisplay it should display it.
-
 struct Listing: Decodable {
     let id: Int
     let title: String
