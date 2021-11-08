@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SBA-da-QbG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DB6-Zo-mJz">
+            <objects>
+                <tabBarController id="SBA-da-QbG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FOG-KC-EYw"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qbq-yz-lX6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3KI-zA-cKf" kind="relationship" relationship="viewControllers" id="h8c-Xb-BBn"/>
+                        <segue destination="17J-w7-XPl" kind="relationship" relationship="viewControllers" id="gMt-mq-Ck8"/>
+                        <segue destination="srs-AI-yg1" kind="relationship" relationship="viewControllers" id="0sW-Bl-tRU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQb-TC-PBD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1026" y="-166"/>
+        </scene>
+        <!--Latest Listings-->
+        <scene sceneID="dhJ-ac-uoQ">
+            <objects>
+                <viewController id="1qx-JA-YY5" customClass="LatestListingsViewController" customModule="TradeMeMobileTechTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e7C-vk-uqT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QtF-9V-eMV">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z0V-iy-p8g"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="z0V-iy-p8g" firstAttribute="bottom" secondItem="QtF-9V-eMV" secondAttribute="bottom" id="0rB-jb-Krc"/>
+                            <constraint firstItem="QtF-9V-eMV" firstAttribute="leading" secondItem="z0V-iy-p8g" secondAttribute="leading" id="fpa-FT-442"/>
+                            <constraint firstItem="QtF-9V-eMV" firstAttribute="trailing" secondItem="z0V-iy-p8g" secondAttribute="trailing" id="qJ2-GG-DkJ"/>
+                            <constraint firstItem="QtF-9V-eMV" firstAttribute="top" secondItem="z0V-iy-p8g" secondAttribute="top" id="uWc-z2-Osf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Latest Listings" id="5DV-oT-Rzh"/>
+                    <navigationItem key="navigationItem" title="Latest Listings" id="Xmq-lb-BbG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0z-gc-KKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602.89855072463774" y="-1106.25"/>
+        </scene>
+        <!--Watch List-->
+        <scene sceneID="OLU-fa-nz8">
+            <objects>
+                <viewController id="u5G-nA-gUN" customClass="WatchListViewController" customModule="TradeMeMobileTechTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Doy-ru-WzZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vwh-3t-odl"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Watchlist" id="P0o-OD-aAT"/>
+                    <navigationItem key="navigationItem" title="Watch List" id="AXI-ur-uMJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="akJ-ez-apd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="-463"/>
+        </scene>
+        <!--Latest Listings-->
+        <scene sceneID="VTc-S0-vhg">
+            <objects>
+                <viewController id="6Bc-KM-fO2" customClass="MyTradeMeViewController" customModule="TradeMeMobileTechTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zbe-zx-BII">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Jj2-mS-T8u"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Trade Me" id="nCt-Tu-bi4"/>
+                    <navigationItem key="navigationItem" title="Latest Listings" id="hBn-uj-9Dw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6v-H3-DaJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="186"/>
+        </scene>
+        <!--Latest Listings-->
+        <scene sceneID="4L9-IZ-UL8">
+            <objects>
+                <navigationController title="Latest Listings" id="3KI-zA-cKf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Latest Listings" id="b9r-x4-R6e"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kg6-63-t9j">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1qx-JA-YY5" kind="relationship" relationship="rootViewController" id="tmC-jc-ndR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEq-AQ-qot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171" y="-1106"/>
+        </scene>
+        <!--Watchlist-->
+        <scene sceneID="OV2-zB-Bh4">
+            <objects>
+                <navigationController title="Watchlist" id="17J-w7-XPl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Watch List" id="fu9-8i-r24"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="trH-wM-Lgs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="u5G-nA-gUN" kind="relationship" relationship="rootViewController" id="ot2-LM-IQR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKQ-mi-mfy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171" y="-457"/>
+        </scene>
+        <!--My Trade Me-->
+        <scene sceneID="qpe-7F-2Vt">
+            <objects>
+                <navigationController title="My Trade Me" id="srs-AI-yg1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Trade Me" id="oAb-es-ZsK"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C2Q-FM-AdV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6Bc-KM-fO2" kind="relationship" relationship="rootViewController" id="7U2-Lq-rg1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S3E-gm-GWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171" y="186"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
