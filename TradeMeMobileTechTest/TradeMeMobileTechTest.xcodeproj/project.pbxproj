@@ -20,7 +20,7 @@
 		2C9CCEFB273891D2000FF496 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCEFA273891D2000FF496 /* WatchListViewController.swift */; };
 		2C9CCEFD27389268000FF496 /* MyTradeMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCEFC27389268000FF496 /* MyTradeMeViewController.swift */; };
 		2C9CCEFF2738A259000FF496 /* LatestListingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCEFE2738A259000FF496 /* LatestListingsViewModel.swift */; };
-		2C9CCF0427390AC6000FF496 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCF0327390AC6000FF496 /* Extensions.swift */; };
+		2C9CCF0427390AC6000FF496 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCF0327390AC6000FF496 /* UIExtensions.swift */; };
 		2C9CCF0827391A41000FF496 /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCF0727391A41000FF496 /* ListingTableViewCell.swift */; };
 		2C9CCF0A27391D0B000FF496 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CCF0927391D0B000FF496 /* Model.swift */; };
 		2CF9F9772739D29C00424270 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9F9762739D29C00424270 /* RootViewController.swift */; };
@@ -64,7 +64,7 @@
 		2C9CCEFA273891D2000FF496 /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
 		2C9CCEFC27389268000FF496 /* MyTradeMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTradeMeViewController.swift; sourceTree = "<group>"; };
 		2C9CCEFE2738A259000FF496 /* LatestListingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestListingsViewModel.swift; sourceTree = "<group>"; };
-		2C9CCF0327390AC6000FF496 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2C9CCF0327390AC6000FF496 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		2C9CCF0727391A41000FF496 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 		2C9CCF0927391D0B000FF496 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		2CF9F9762739D29C00424270 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 				2CF9F9732739C5CC00424270 /* LatestListings */,
 				2C9CCEF927389058000FF496 /* API */,
 				2C9CCF0927391D0B000FF496 /* Model.swift */,
-				2C9CCF0327390AC6000FF496 /* Extensions.swift */,
+				2C9CCF0327390AC6000FF496 /* UIExtensions.swift */,
 				2C9CCECB2738818A000FF496 /* Main.storyboard */,
 				2C9CCECE2738818B000FF496 /* Assets.xcassets */,
 				2C9CCEF727388792000FF496 /* Colours.xcassets */,
@@ -343,7 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9CCEFF2738A259000FF496 /* LatestListingsViewModel.swift in Sources */,
-				2C9CCF0427390AC6000FF496 /* Extensions.swift in Sources */,
+				2C9CCF0427390AC6000FF496 /* UIExtensions.swift in Sources */,
 				2C9CCECA2738818A000FF496 /* LatestListingsViewController.swift in Sources */,
 				2CF9F9772739D29C00424270 /* RootViewController.swift in Sources */,
 				2C9CCEC62738818A000FF496 /* AppDelegate.swift in Sources */,
